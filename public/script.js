@@ -44,7 +44,7 @@ function sendInfo(){
 
   xmlhttp.onloadend = function(e) {
     console.log(xmlhttp.responseText);
-    window.location = "https://credit-app-new.glitch.me/result.html";
+    window.location = "/result.html";
   }
   xmlhttp.send(JSON.stringify(data));
 }
