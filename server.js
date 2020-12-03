@@ -155,8 +155,7 @@ app.get('/result', function (req, res) {
       console.log("Database reading error", err.message);
     }
     else {
-      res.json(table);
-      console.table(table);
+      res.send('Qualified!');
     }
   });
   
@@ -185,7 +184,7 @@ app.all("*", function (request, response) {
 //            SERVER STARTUP
 ////////////////////////////////////////////////////////
 
-const listener = app.listen(process.env.PORT, () => {
+const listener = app.listen(3001, () => {
   console.log("Your app is listening on port " + listener.address().port);
 });
 
